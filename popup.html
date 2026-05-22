@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Optimizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🛍 E-Commerce Optimizer</h1>
+            <p class="subtitle">Analyze & Optimize Your Store</p>
+        </header>
+
+        <main>
+            <!-- URL Input Section -->
+            <section class="input-section">
+                <label for="urlInput">Paste Store URL:</label>
+                <input 
+                    type="url" 
+                    id="urlInput" 
+                    placeholder="https://example-store.com"
+                    class="url-input"
+                >
+                <button id="analyzeBtn" class="btn btn-primary">🔍 Analyze Site</button>
+            </section>
+
+            <!-- Loading State -->
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Analyzing your store...</p>
+            </div>
+
+            <!-- Results Section -->
+            <section id="results" class="hidden results-section">
+                <h2>Analysis Results</h2>
+                
+                <!-- Features Found -->
+                <div class="result-card">
+                    <h3>✨ Features Detected</h3>
+                    <ul id="featuresList" class="features-list"></ul>
+                </div>
+
+                <!-- Performance Metrics -->
+                <div class="result-card">
+                    <h3>⚡ Performance</h3>
+                    <div id="performanceMetrics" class="metrics-grid"></div>
+                </div>
+
+                <!-- Recommendations -->
+                <div class="result-card">
+                    <h3>💡 Optimization Recommendations</h3>
+                    <ul id="recommendationsList" class="recommendations-list"></ul>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="action-buttons">
+                    <button id="optimizeBtn" class="btn btn-success">✨ Generate Optimized Template</button>
+                    <button id="previewBtn" class="btn btn-info">👁️ Preview</button>
+                </div>
+            </section>
+
+            <!-- Export Options -->
+            <section id="export" class="hidden export-section">
+                <h2>Export Options</h2>
+                <div class="export-buttons">
+                    <button id="shopifyBtn" class="btn btn-shopify">📦 Export for Shopify</button>
+                    <button id="htmlBtn" class="btn btn-html">📄 Download HTML</button>
+                    <button id="backBtn" class="btn btn-secondary">← Back</button>
+                </div>
+            </section>
+
+            <!-- Error State -->
+            <div id="error" class="hidden error-message">
+                <p id="errorText"></p>
+                <button class="btn btn-secondary" onclick="location.reload()">Retry</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="analyzer.js"></script>
+    <script src="optimizer.js"></script>
+    <script src="shopify-generator.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

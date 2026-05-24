@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-    width: 600px;
+    width: 700px;
     padding: 0;
     background: white;
     border-radius: 12px;
@@ -64,6 +64,7 @@ label {
     border-radius: 8px;
     font-size: 14px;
     margin-bottom: 12px;
+    font-family: monospace;
     transition: border-color 0.3s;
 }
 
@@ -95,10 +96,6 @@ label {
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
-}
-
-.btn-primary:active {
-    transform: translateY(0);
 }
 
 .btn-success {
@@ -139,6 +136,16 @@ label {
 .btn-html:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 20px rgba(255, 146, 43, 0.4);
+}
+
+.btn-css {
+    background: linear-gradient(135deg, #339af0 0%, #1971c2 100%);
+    color: white;
+}
+
+.btn-css:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(51, 154, 240, 0.4);
 }
 
 .btn-secondary {
@@ -210,6 +217,37 @@ label {
     color: #667eea;
 }
 
+.site-result {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 13px;
+}
+
+.site-result strong {
+    display: block;
+}
+
+.site-result small {
+    color: #999;
+}
+
+.design-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    font-size: 13px;
+}
+
+.color-swatch {
+    margin-bottom: 12px;
+}
+
+.color-swatch strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
 .features-list,
 .recommendations-list {
     list-style: none;
@@ -218,25 +256,17 @@ label {
 
 .features-list li,
 .recommendations-list li {
-    padding: 8px 0;
-    padding-left: 24px;
-    position: relative;
-    font-size: 14px;
-    color: #555;
+    padding: 12px;
+    margin-bottom: 8px;
+    background: white;
+    border-radius: 4px;
+    font-size: 13px;
+    border-left: 3px solid #667eea;
 }
 
-.features-list li:before {
-    content: '✨';
-    position: absolute;
-    left: 0;
-}
-
-.recommendations-list li:before {
-    content: '→';
-    position: absolute;
-    left: 0;
-    color: #667eea;
-    font-weight: bold;
+.features-list li strong {
+    display: block;
+    margin-bottom: 4px;
 }
 
 .metrics-grid {
@@ -285,6 +315,23 @@ label {
 
 .export-buttons .btn {
     margin-bottom: 0;
+}
+
+.template-summary {
+    background: #f9f9f9;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.template-summary h4 {
+    margin-bottom: 12px;
+    color: #667eea;
+}
+
+.template-summary p {
+    font-size: 13px;
+    margin-bottom: 8px;
 }
 
 .error-message {
